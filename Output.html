@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Output</title>
+    <script>
+        function showOutputs() {
+            // Menggunakan console.log()
+            console.log("Output ini ditampilkan di console log.");
+            
+            // Menggunakan alert()
+            alert("Output ini ditampilkan di alert box.");
+
+            
+            // Menggunakan document.write()
+            document.write("Output ini ditulis langsung di dalam dokumen HTML.<br>");
+            
+            // Menggunakan innerHTML
+            const innerHtmlElement = document.getElementById("inner-html-output");
+            if (innerHtmlElement) {
+                innerHtmlElement.innerHTML = "Output ini ditampilkan menggunakan innerHTML.";
+            } else {
+                console.error("Element with ID 'inner-html-output' not found.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Menampilkan Output dari JavaScript</h1>
+    <button onclick="showOutputs()">Tampilkan Output</button>
+    <div id="inner-html-output" style="margin-top: 20px;"></div>
+</body>
+</html>
